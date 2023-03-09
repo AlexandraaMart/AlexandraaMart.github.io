@@ -18,13 +18,13 @@
 		<h1>Изображения</h1>
 		<h2>Элемент <code>img</code></h2>
 		<p>Элемент <code>img</code> внедряет изображение в текущий документ в месте определения элемента. Элемент <code>img</code> не имеет содержимого — он замещается на ходу изображением, указанным в атрибуте <code>src</code>.</p>
-        <img src=aquaria.jpg alt="Черепаха">
-		<img src=redcat.jpg alt="Кошечка">
+        <img src="images/aquaria.jpg" alt="Черепаха">
+		<img src="images/redcat.jpg" width = "300" height="300" alt="Кошечка">
 		
 		<h2>Альтернативный текст</h2>
 		<p>Атрибут <code>alt</code> предоставляет краткое описание изображения. Он содержит альтернативный текст, который отображается, если изображение не может быть выведено. Пользовательские агенты должны отображать альтернативный текст, если они не поддерживают изображения, или сконфигурированы так, чтобы не показывать изображения (отключен показ изображений).</p>
-		<img src=globus.gif alt="Анимированный глобус">
-		<img src=slon.png alt="Слон">
+		<img src="images/globus.gif" alt="Анимированный глобус">
+		<img src="images/slon.png" alt="Слон">
 		
 		<h2>Размеры изображения</h2>
 		<p>Атрибуты <code>width</code> и <code>height</code> задают размеры области изображения. Если оба атрибута не заданы, размер изображения будет определен после его полной загрузки, после чего размеры области будут изменены для размещения содержания картинки.
@@ -35,8 +35,8 @@
 		используют атрибуты <code>sizes</code> и  <code>srcset</code>.
 		Атрибут <code>sizes</code> задаёт размеры изображения для разных макетов страницы. 
 		Атрибут <code>srcset</code> задаёт путь к графическим файлам с учётом размера изображения и устройств.
-		<p><img src=html5-logo.png width = "200" height="200" alt="Логотип HTML"></p>
-		<p><img src=html5-logo.svg width = "100" height="100" alt="Логотип HTML"></p>
+		<p><img src="images/html5-logo.png" width = "200" height="200" alt="Логотип HTML"></p>
+		<p><img src="images/html5-logo.svg" width = "50" height="50" alt="Логотип HTML"></p>
 	</p>
 
 		<h2>Подпись к изображению</h2>
@@ -45,13 +45,14 @@
 		Обычно применяется для иллюстраций, фрагментов кода, схем, графиков, диаграмм и др.
 		Элемент <code>figcaption</code> содержит описание для элемента <code>figure</code>. Он должен быть первым или последним элементом в группе.</p>
 		<figure>
-			<img src=light.gif width = "200" height="200" alt = "Анимированная свеча">
-			<img src=muskle.png width = "150" height="150" alt = "Мускулы">
+			<img src="images/light.gif" width = "100" height="100">
+			<img src="images/muskle.png" width = "150" height="150">
+			<figcaption> Анимированная свеча  и  мускулы
 		</figure>
 		<figure>
-			<img src=mushroom_landscape.jpg width = "150" height="150">
-			<img src=mushroom_portrait.jpg width = "150" height="150">
-		    <figcaption> Мухомор
+			<img src="images/mushroom_landscape.jpg" width = "150" height="150">
+			<img src="images/mushroom_portrait.jpg" width = "150" height="150">
+		    <figcaption> Мухоморы
 		</figure>
 	
 		<h2>Элемент picture</h2>
@@ -64,8 +65,8 @@
 		Затем выбранное изображение отображается в пространстве, занятом элементом <code>img</code>. 
 		<picture>
 			<figure>
-				<img src=mushroom.jpg width = "150" height="150">
-				<img src=mushroom_retina.jpg width = "300" height="300">
+				<img src="images/mushroom.jpg" width = "150" height="150">
+				<img src="images/mushroom_retina.jpg" width = "300" height="300">
 		    </figure>
 			<figcaption> Мухоморы
 		</picture>
