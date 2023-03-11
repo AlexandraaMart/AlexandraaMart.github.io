@@ -5,9 +5,42 @@
         <title>Форма</title>
         </head>
         <body>
+            <h1>Форма регистрации пользователя</h1>
         <form action="#">
-        
+            <label>E-mail</label>
+            <input type="email" name="E-mail" value="Введите e-mail" readonly><br>
+            
+            <label>Пароль</label>
+            <input type="text" name="Password" value="Введите пароль" readonly><br>
+
+            <label>Пол</label>
+            <label>
+                <input type="radio" name="status"> Мужчина
+            </label>
+            <label>
+                <input type="radio" name="status"> Женщина
+            </label>
+            
+            
+            <p><input type="checkbox" name="Русский" value="yes">Русский<br>
+            <input type="checkbox" name="Испанский" value="yes">Испанский<br>
+            <input type="checkbox" name="Немецкий" value="yes">Немецкий<br>
+            <input type="checkbox" name="Английский" value="yes">Английский<br>
+            <input type="checkbox" name="Китайский" value="yes">Китайский<br></p>
+            
+            <label>Обо мне</label>
+            <textarea name="description" cols="30" rows="10" readonly>Напишите коротко о себе</textarea>
+
+            <p><button>
+                Готово
+              </button>
+
+              <button>
+                Очистить
+              </button></p>
+           
         </form>
+        
         </body>
         </html>
 </html>
