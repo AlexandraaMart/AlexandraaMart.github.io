@@ -3,44 +3,75 @@
         <head>
         <meta charset="utf-8">
         <title>Форма</title>
+        <style>
+            table {
+                width: 400px;
+                border: 0px solid gray;
+                margin: 15px;
+                float:left
+            }
+            td, th {
+                border: 0px solid gray;
+                padding: 5px;
+            }
+            </style>
         </head>
         <body>
             <h1>Форма регистрации пользователя</h1>
-        <form action="#">
-            <label>E-mail</label>
-            <input type="email" name="E-mail" value="Введите e-mail" readonly><br>
-            
-            <label>Пароль</label>
-            <input type="text" name="Password" value="Введите пароль" readonly><br>
-
-            <label>Пол</label>
-            <label>
-                <input type="radio" name="status"> Мужчина
-            </label>
-            <label>
-                <input type="radio" name="status"> Женщина
-            </label>
-            
-            
-            <p><input type="checkbox" name="Русский" value="yes">Русский<br>
-            <input type="checkbox" name="Испанский" value="yes">Испанский<br>
-            <input type="checkbox" name="Немецкий" value="yes">Немецкий<br>
-            <input type="checkbox" name="Английский" value="yes">Английский<br>
-            <input type="checkbox" name="Китайский" value="yes">Китайский<br></p>
-            
-            <label>Обо мне</label>
-            <textarea name="description" cols="30" rows="10" readonly>Напишите коротко о себе</textarea>
-
-            <p><button>
-                Готово
-              </button>
-
-              <button>
-                Очистить
-              </button></p>
-           
-        </form>
         
-        </body>
-        </html>
+              <form action="#">
+                    <table>
+                        <tbody>
+                        <tr>
+                            <th><p style="text-align:left"> E-mail</p></th>
+                            <td><input type="email" id = "name" name="st_email"></td>
+                        </tr>
+                        <tr>
+                            <th><p style="text-align:left">Пароль</p></th>
+                            <td><input type="text" name="Password"></td>
+                        </tr>
+                        <tr>
+                            <th><p style="text-align:left">Пол</p></th>
+                            <td><label>
+                                <input type="radio" name="status"> Мужчина
+                            </label>
+                            <label>
+                                <input type="radio" name="status"> Женщина
+                            </label></td>
+                        </tr>
+                        <tr>
+                            <th><p style="text-align:left">Год рождения: </p></th>
+                            <td><select name="select" size="1">
+                                <option selected value="s1">1981</option>
+                                <option value="s1">1982</option>
+                                <option value="s2">1983</option>
+                                <option value="s3">1984</option>
+                                <option value="s4">1985</option>
+                               </select></td>
+                        </tr>
+                        <tr>
+                            <th><p style="text-align:left">Я знаю: </p></th>
+                            <td> <input type="checkbox" name="Испанский" id="Испанский" value="yes">Испанский<br>
+                                <input type="checkbox" name="Немецкий" id="fr" value="yes">Немецкий<br>
+                                <input type="checkbox" name="Английский" id="Английский" value="yes">Английский<br>
+                                <input type="checkbox" name="Китайский" id="Китайский" value="yes">Китайский<br></td>
+                        </tr>
+                        <tr>
+                            <th><p style="text-align:left">Обо мне</p></th>
+                            <td><textarea name="description" cols="30" rows="10" readonly>Напишите коротко о себе</textarea></td>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <td><button>
+                                Готово
+                              </button>
+                
+                              <button>
+                                Очистить
+                              </button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </body>
 </html>
