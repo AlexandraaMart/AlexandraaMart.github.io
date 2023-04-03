@@ -4,25 +4,35 @@
 <meta charset="utf-8">
 <title>Использование float при построении колонок</title>
 <style>
+.container{
+	display: grid;
+	grid-template-columns: [first] 200px [second] 600px [thrird] 200px;
+  	grid-template-rows: 1fr;
+	column-gap: 10px;
+}
 #left{
 	background:#ccf;
-    float: left;
+	grid-column-start: 1;
     width: 200px;
 }
 #right{
 	background:#fcc;
-    float: right;
     width: 200px;
+	grid-column-start: 3;
+	grid-row-start: 1;
 }
 #center{
 	background:#cfc;
-	display: grid;
+	width: 600px;
+	grid-column-start: 2;
 }
 </style>
 </head>
 <body>
+	<div class="container">
 	<div id="left">left<br>left<br>left<br>left<br>left</div>
 	<div id="right">right<br>right<br>right<br>right</div>
 	<div id="center">center text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text</div>
+	</div>
 </body>
 </html>
