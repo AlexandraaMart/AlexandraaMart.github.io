@@ -11,7 +11,7 @@
 "use strict";
 let age = prompt("Введите число");
 let gender = prompt("Введите пол");
-if (age > 5 & age <=17){
+if (age >= 0 & age <=17){
     alert("Вам работать ещё рано — учитесь");
 }
     else if ((age >= 18 & age <=59 & gender == "м") || (age >= 18 & age <=54 & gender == "ж")){

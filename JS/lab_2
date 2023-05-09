@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 2</title>
+</head>
+<body>
+<script>
+"use strict";
+let num = prompt("Введите число: ");
+if (num == 1 ){
+    alert("на ветке сидит "num" ворона");
+}
+    else if ((age >= 18 & age <=59 & gender == "м") || (age >= 18 & age <=54 & gender == "ж")){
+        alert("Вам ещё работать и работать");
+}
+    else if ((age >= 60 & age <=64 & gender == "м") || (age >= 55 & age <=59 & gender == "ж")){
+        alert("Скоро пенсия!");
+}
+    else if ((age >= 65 & gender == "м") || (age >= 60 & gender == "ж")){
+        alert("Вам пора на пенсию");
+}
+    else {
+        alert("Да кто ты такой?");
+    }
+</script>
+
+</body>
+</html>
