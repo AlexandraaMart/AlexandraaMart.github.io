@@ -10,10 +10,10 @@
     <script>
         "use strict";
         let num;
-        while (true){
-            num = prompt("Введите число больше 100: ");
-            if(num > 100 || a == null) break;
-        }
+        do {
+            num = prompt("Введите число больше 100?");
+        } 
+        while (num <= 100 && num);
         </script>
 </body>
 </html>
