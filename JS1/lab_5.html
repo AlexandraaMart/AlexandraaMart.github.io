@@ -12,20 +12,19 @@
     <script>
         "use strict";
         let n = prompt("Введите количество строк: ");
-        let k = 0;
+
+        let k = n / 5;
+        let l = n - k;
         let one = "dog dog dog cat cat dog";
         let two = "dog dog cat cat dog dog";
         let three = "dog cat cat dog dog dog";
         let four = "cat cat dog dog dog dog";
         let five = "cat dog dog dog dog cat";
         var list = [one, two, three, four, five]
-        for (let i = 1; i <= n; i++){
+        for (let i = 1; i <= k; i++) {
             let j = 0;
-            while (j<5){
+            while (j < l + 1) {
                 console.log(list[j]);
-                k++;
-                if (k == n) break;
-                if (j == 4) j==0;
             }
         }
     </script>
