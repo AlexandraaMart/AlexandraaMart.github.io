@@ -1,6 +1,5 @@
-function pow(a, b) {    // фуекция, возводящая а в степень b
-    let result = a ** b; 
-    return result;
+function pow(a, b) {    // функция, возводящая а в степень b 
+    return a**b;
 }
 
 function sumTo(n) { //вычисляет сумму чисел от 1 до n включительно
@@ -24,6 +23,15 @@ function fib(n) { //возвращает n-е число Фибоначчи
         b = c;
     }
     return b;
+}
+
+
+function compare(x) { 
+    return function compare(y) {
+        if (y>x) true;
+        else if (y<x) false;
+        else null;
+    }
 }
 
 function sum() { // возвращает сумму всех своих аргументов
