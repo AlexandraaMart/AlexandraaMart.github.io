@@ -50,23 +50,28 @@
                                </select></td>
                         </tr>
                         <tr>
-                            <th>Я знаю: </th>
-                            <td> <input type="checkbox" name="Испанский" id="a"  value="yes"><label for="a">Испанский</label><br>
-                                <input type="checkbox" name="Русский"  id="e" value="yes"><label for="e">Русский</label><br>
-                                <input type="checkbox" name="Немецкий"  id="b" value="yes"><label for="b">Немецкий</label><br>
-                                <input type="checkbox" name="Английский"  id="c" value="yes"><label for="c">Английский</label><br>
-                                <input type="checkbox" name="Китайский"  id="d" value="yes"><label for="d">Китайский</label><br></td>
+                            <th>Я знаю</th>
+                            <td><input type="checkbox" id="language" name="st_language" checked>
+                                <label>Русский</label><br>
+                                <label><input type="checkbox" id="language1" name="st_language">Испанский</label><br>
+                                <label><input type="checkbox" id="language2" name="st_language">Немецкий</label><br>
+                                <label><input type="checkbox" id="language3" name="st_language">Английский</label><br>
+                                <label><input type="checkbox" id="language4" name="st_language">Китайский</label><br></td>
+                        
+                    
+                            
                         </tr>
+
                         <tr>
                             <th><label for="message">Обо мне</label></th><th> <textarea name="comment" placeholder="Напиши коротко о себе" id="message"></textarea></th>
                         </tr>
                         <tr>
                             <th></th>
-                            <td><button>
+                            <td><button type="submit">
                                 Готово
                               </button>
                 
-                              <button>
+                              <button type="reset">
                                 Очистить
                               </button></td>
                             </tr>
