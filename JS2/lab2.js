@@ -1,5 +1,5 @@
 function pow(a, b) {    // функция, возводящая а в степень b 
-    return a**b;
+    return a ** b;
 }
 
 function sumTo(n) { //вычисляет сумму чисел от 1 до n включительно
@@ -9,28 +9,37 @@ function sumTo(n) { //вычисляет сумму чисел от 1 до n в�
     }
     return sum;
 }
-
 function factorial(n) { //возвращает факториал числа n!
-    return (n != 1) ? n * factorial(n - 1) : 1;
+    let a = BigInt(1);
+    if (n == 0n || n == 1n) return 1n;
+    else{
+        a = n * factorial(n - 1n);
+        return ;
+    }
 }
+
 
 function fib(n) { //возвращает n-е число Фибоначчи
-    let a = 1;
-    let b = 1;
-    for (let i = 3; i <= n; i++) {
-        let c = a + b;
-        a = b;
-        b = c;
+    let a = 1n;
+    let b = 1n;
+    if (n == 0n) {
+        return 0n;
     }
-    return b;
+    else {
+        for (let i = 3n; i <= n; i++) {
+            let c = a + b;
+            a = b;
+            b = c;
+        }
+        return b;
+    }
 }
 
-
-function compare(x) { 
-    return function compare(y) {
-        if (y>x) true;
-        else if (y<x) false;
-        else null;
+function compare(x) {
+    return function (y) {
+        if (y > x) return true;
+        else if (y < x) return false;
+        else if (y == x) return null;
     }
 }
 
