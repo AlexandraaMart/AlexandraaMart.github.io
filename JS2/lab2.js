@@ -1,25 +1,49 @@
-function pow(a, b) {    // функция, возводящая а в степень b 
+/**
+ * Возвращает a, возведённое в b-ную степень.
+ *
+ * @param {number} a Возводимое в степень число.
+ * @param {number} b Степень, должна быть натуральным числом.
+ * @return {number} a ** b, возведённое в n-ную степень.
+ */
+
+function pow(a, b) {    
     return a ** b;
 }
 
-function sumTo(n) { //вычисляет сумму чисел от 1 до n включительно
+/**
+ * Возвращает сумму чисел от 1 до n включительно.
+ * @param {number} n Число, до которого вычисляется сумма, должно быть натуральным числом.
+ * @return {number} sum, сумму чисел от 1 до n включительно.
+ */
+function sumTo(n) {
     let sum = 0;
     for (let i = 1; i <= n; i++) {
         sum += i;
     }
     return sum;
 }
-function factorial(n) { //возвращает факториал числа n!
-    let a = BigInt(1);
-    if (n == 0n || n == 1n) return 1n;
-    else{
-        a = n * factorial(n - 1n);
-        return ;
-    }
+
+/**
+ * Возвращает факториал числа n!.
+ * @param {number} n Число, факториал которого вычисляется, должно быть натуральным числом.
+ * @return {number} res, факториал числа n!.
+ */
+
+function factorial(n) {  
+    if (n<=1) return 1n;
+    else {
+        res = BigInt (n) * BigInt(factorial(n-1))
+        return res;
+    }  
 }
 
+/**
+ * Возвращает n-е число Фибоначчи.
+ * @param {number} n Порядковый номер числа Фибоначчи, должен быть натуральным числом.
+ * @return {number} b, n-е число Фибоначчи.
+ */
 
-function fib(n) { //возвращает n-е число Фибоначчи
+function fib(n) {
     let a = 1n;
     let b = 1n;
     if (n == 0n) {
@@ -35,6 +59,13 @@ function fib(n) { //возвращает n-е число Фибоначчи
     }
 }
 
+/**
+ * Возвращает результат сравнения значений y и x.
+ * @param {number} x Первый аргумент, должен быть целочисленным.
+ * @param {number} y Второй аргумент, должен быть целочисленным.
+ * @return {boolean} Результат сравнения.
+ */
+
 function compare(x) {
     return function (y) {
         if (y > x) return true;
@@ -43,7 +74,13 @@ function compare(x) {
     }
 }
 
-function sum() { // возвращает сумму всех своих аргументов
+/**
+ * Возвращает сумму всех своих аргументов.
+ * @param {number} Значения аргументов.
+ * @return {number} result, сумма всех своих аргументов.
+ */
+
+function sum() {
     var result = 0;
     for (var i = 0; i < arguments.length; i++) {
         result += arguments[i];
