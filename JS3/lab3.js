@@ -1,4 +1,3 @@
-
 export function getDecimal(num) {
     if (Math.trunc(num) == num) {
         return 0;
@@ -10,6 +9,7 @@ export function getDecimal(num) {
         return (num - 1).toFixed(2);
     }
 }
+
 
 
 export function ucFirst(str) {
