@@ -31,15 +31,15 @@
             checkSpam,
             truncate,
             camelize,
-            fibs,
-            arrReverseSorted,
-            unique
+            // fibs,
+            // arrReverseSorted,
+            // unique
         } from './lab3.js';
 
         describe("getDecimal", function () {
 
-            it("getDecimal(1.23) => 0.23", function () {
-                assert.strictEqual(getDecimal(1.23), 0.23);
+            it("getDecimal(3.14) => 0.14", function () {
+                assert.strictEqual(getDecimal(3.14), 0.14);
             });
 
             it("getDecimal(-1.23) => 0.77", function () {

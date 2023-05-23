@@ -6,15 +6,15 @@ export function getDecimal(num) {
         return num - (-Math.ceil(-num));
     }
     if (num > 1) {
-        return (num - 1).toFixed(2);
+        return +(num - Math.trunc(num)).toFixed(2);
     }
 }
 
 
 
 export function ucFirst(str) {
-    if (str == null) {
-        return '';
+    if (!str) {
+        return str;
     }
     else {
         let NewStr = str[0].toUpperCase() + str.slice(1);
@@ -44,8 +44,11 @@ export function truncate(str, maxlength) {
 
 export function camelize(str) {
     let StrNew = str.split('-');
-    for (let i = 0; i <= StrNew.lenght; i++) {
-        console.log(StrNew[i]);
+    console.log(StrNew)
+    let i = 0;
+    while (i <= StrNew.lenght) {
+        console.log(ucFirst(StrNew[i]));
+        i++;
     }
-    return StrNew.join('');
+    return StrNew.join('')
 }
