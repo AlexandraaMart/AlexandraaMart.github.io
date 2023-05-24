@@ -43,12 +43,13 @@ export function truncate(str, maxlength) {
 
 
 export function camelize(str) {
-    let StrNew = str.split('-');
-    console.log(StrNew)
-    let i = 0;
-    while (i <= StrNew.lenght) {
-        console.log(ucFirst(StrNew[i]));
-        i++;
+    let STR = str.split("-");
+    let StrNew = "";
+    for (let i = 0; i <= STR.length - 1; i++) {
+        if (i == 0) {
+            StrNew = STR[0];
+        }
+        else StrNew += ucFirst(STR[i]);
     }
-    return StrNew.join('')
+    return StrNew;
 }
