@@ -43,7 +43,7 @@ function factorial(n) {
  * @return {number} b, n-е число Фибоначчи.
  */
 
-function fib(n) {
+export function fib(n) {
     let a = 1n;
     let b = 1n;
     if (n == 0n) {
