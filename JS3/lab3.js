@@ -53,3 +53,27 @@ export function camelize(str) {
     }
     return StrNew;
 }
+
+export function fib(n) {
+    let a = 1n;
+    let b = 1n;
+    if (n == 0n) {
+        return 0n;
+    }
+    else {
+        for (let i = 3n; i <= n; i++) {
+            let c = a + b;
+            a = b;
+            b = c;
+        }
+        return b;
+    }
+}
+
+export function fibs(n){
+    let arr = [];
+    for (let i = 0; i<n; i++){
+        arr.push(fib(i));
+    }
+    return arr;
+}

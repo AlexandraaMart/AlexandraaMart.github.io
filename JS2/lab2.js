@@ -6,7 +6,7 @@
  * @return {number} a ** b, возведённое в n-ную степень.
  */
 
-function pow(a, b) {    
+function pow(a, b) {
     return a ** b;
 }
 
@@ -29,12 +29,12 @@ function sumTo(n) {
  * @return {number} res, факториал числа n!.
  */
 
-function factorial(n) {  
-    if (n<=1) return 1n;
+function factorial(n) {
+    if (n <= 1) return 1n;
     else {
-        res = BigInt (n) * BigInt(factorial(n-1))
+        res = BigInt(n) * BigInt(factorial(n - 1))
         return res;
-    }  
+    }
 }
 
 /**
