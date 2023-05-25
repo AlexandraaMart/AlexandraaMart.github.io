@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+        let book1 = new Object(); // синтаксис "конструктор объекта"
+        book1 = {
+            title: "Гордость и предубеждение",
+            pubYear: 1796,
+            price: 360
+        };  // синтаксис "литерал объекта"
+
+        let book2 = new Object();
+        book2.title = prompt("Введите название книги: ");
+        book2.pubYear = prompt("Введите год написания книги: ");
+        book2.price = prompt("Введите цену книги: ");
+
+        for (let i in book2) console.log(book2[i]);
+
+
+    </script>
+
+</body>
+
+</html>
