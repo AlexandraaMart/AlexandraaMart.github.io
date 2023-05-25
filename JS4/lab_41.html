@@ -15,7 +15,12 @@
         book1 = {
             title: "Гордость и предубеждение",
             pubYear: 1796,
-            price: 360
+            price: 360,
+            show : function showBook(){
+                console.log(book1.title);
+                console.log(book1.price);
+        }
+
         };  // синтаксис "литерал объекта"
 
         let book2 = new Object();
@@ -24,6 +29,8 @@
         book2.price = prompt("Введите цену книги: ");
 
         for (let i in book2) console.log(book2[i]);
+
+        console.log(book1);
 
 
     </script>
