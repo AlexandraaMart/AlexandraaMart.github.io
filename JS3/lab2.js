@@ -63,7 +63,7 @@ export function fib(n) {
  * Возвращает результат сравнения значений y и x.
  * @param {number} x Первый аргумент, должен быть целочисленным.
  * @param {number} y Второй аргумент, должен быть целочисленным.
- * @return {boolean} Результат сравнения.
+ * @return {function} Анонимная функция, которая вернет true, false или null
  */
 
 function compare(x) {

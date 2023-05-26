@@ -62,7 +62,7 @@ export function truncate(str, maxlength) {
  * после них получают заглавную букву.
  * 
  * @param {string} str Проверяемая строка.
- * @return {number} StrNew, преобразованная строка.
+ * @return {string} StrNew, преобразованная строка.
  */
 export function camelize(str) {
     let STR = str.split("-");
@@ -79,7 +79,7 @@ export function camelize(str) {
  * Фибоначчи до n-го числа (не включая его).
  * 
  * @param {number} n натуральноее число, количество чисел Фибоначчи.
- * @return {arr} arr, массив с числами Фибоначчи.
+ * @return {Array} arr, массив с числами Фибоначчи.
  */
 export function fibs(n) {
     let arr = [];
@@ -90,8 +90,8 @@ export function fibs(n) {
 /**
  * Возвращает массив из элементов, отсортированный по убыванию.
  *
- * @param {arr} arr массив элементов.
- * @return {arr} arr, массив, отсортированный по убыванию.
+ * @param {Array} arr массив элементов.
+ * @return {Array} arr, массив, отсортированный по убыванию.
  */
 export function arrReverseSorted(arr) {
     return arr.sort(function (a, b) {
@@ -102,8 +102,8 @@ export function arrReverseSorted(arr) {
 /**
  * Возвращает массив уникальных, не повторяющихся значений.
  *
- * @param {arr} arr массив элементов.
- * @return {arr} arr, массив с уникальными значениями.
+ * @param {Array} arr массив элементов.
+ * @return {Array} arr, массив с уникальными значениями.
  */
 export function unique(arr) {
     let set = new Set();
