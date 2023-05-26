@@ -1,25 +1,35 @@
 "use strict"
-var obj = {
+let obj = {
     className: 'open menu'
 }
 
 obj.addClass = function addClass(cls) {
-    let subObj = {};
     let arr = this.className.split(" ");
-    // заносим элементы в объект.
-    for (let i = 0; i < arr.length; i++) {
-        subObj[arr[i]] = true;
+    if (!arr.includes(cls)) {
+        arr.push(cls)
     }
-    // если класа нет то свойство добавится.
-    subObj[cls] = true;
-    // получаем из свойств объекта, массив.
-    arr = Object.keys(subObj);
-    // присваеваем свойству объекта, новый список классов.
-    this.className = arr.join(" ");
+    this.className = arr.join(" ");// присваеваем свойству объекта, новый список классов.
 }
 
-obj.addClass('new'); // obj.className='open menu new'
-obj.addClass('open');  // без изменений (класс уже существует)
-obj.addClass('me'); // obj.className='open menu new me'
+obj.addClass('new'); // open menu new
+obj.addClass('hi'); // open menu new hi
+obj.addClass('osdd');  // без изменений 
+
+console.log(obj.className);
+
+obj.removeClass = function removeClass(cls) {
+    let arr = this.className.split(" ");
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] == cls) {
+            arr.splice(i, 1);
+            i--;
+        }
+    }
+    obj.className = arr.join(' ');
+}
+
+obj.removeClass('osdd'); // open menu hi
+obj.removeClass('ho'); // open menu hi
+obj.removeClass('open'); // menu hi
 
 console.log(obj.className);
