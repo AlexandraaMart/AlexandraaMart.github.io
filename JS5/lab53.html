@@ -1,50 +1,61 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-	<meta charset="UTF-8">
-	<title>List</title>
+    <meta charset="UTF-8">
+    <title>List</title>
 </head>
+
 <body>
-  <ul>
-    <li>Животные
-      <ul>
-        <li>Млекопитающие
-          <ul>
-            <li>Коровы</li>
-            <li>Ослы</li>
-            <li>Собаки</li>
-            <li>Тигры</li>
-          </ul>
+    <ul>
+        <li>Животные
+            <ul>
+                <li>Млекопитающие
+                    <ul>
+                        <li>Коровы</li>
+                        <li>Ослы</li>
+                        <li>Собаки</li>
+                        <li>Тигры</li>
+                    </ul>
+                </li>
+                <li>Другие
+                    <ul>
+                        <li>Змеи</li>
+                        <li>Птицы</li>
+                        <li>Ящерицы</li>
+                    </ul>
+                </li>
+            </ul>
         </li>
-        <li>Другие
-          <ul>
-            <li>Змеи</li>
-            <li>Птицы</li>
-            <li>Ящерицы</li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li>Рыбы
-      <ul>
-        <li>Аквариумные
-          <ul>
-            <li>Гуппи</li>
-            <li>Скалярии</li>
-          </ul>
+        <li>Рыбы
+            <ul>
+                <li>Аквариумные
+                    <ul>
+                        <li>Гуппи</li>
+                        <li>Скалярии</li>
+                    </ul>
 
+                </li>
+                <li>Морские
+                    <ul>
+                        <li>Морская форель</li>
+                    </ul>
+                </li>
+            </ul>
         </li>
-        <li>Морские
-          <ul>
-            <li>Морская форель</li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-  </ul>
+    </ul>
 
-  <script>
-	/* ваш код */
-  </script>
+    <script>
+        //Метод Element.getElementsByTagName() возвращает живые HTMLCollectionэ лементы с заданным именем тега
+        //firstChildСвойство интерфейса только для чтения Nodeвозвращает первый дочерний элемент узла в дереве
+        //Свойство nodeValue интерфейса Node возвращает или задает значение текущего узла.
+        let a = document.body.getElementsByTagName("li");
+        for (let i = 0; i < a.length; i++) {
+            let name = a[i].firstChild.nodeValue.trim();
+            let count = a[i].getElementsByTagName("li").length; 
+            console.log(`${name}: ${count}`);
+        }
+    </script>
 </body>
+
 </html>
