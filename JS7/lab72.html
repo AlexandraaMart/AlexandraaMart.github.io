@@ -1,35 +1,44 @@
 <!DOCTYPE html>
 <html>
- <head>
-  <meta charset="utf-8">
-  <title>placeholder</title>
-  <style>
-   form {
-    width: 200px; /* Ширина формы */
-    margin: auto; /* Выравниваем по центру */
-   }
-   input {
-    width: 80%; /* Ширина поля */
-    margin: 10px 0; /* Отступы сверху и снизу */
-    padding: 12px 0; /* Поля вокруг текста */
-   }
-   input:focus {
-    outline: none; /* Убираем контур */
-   }
-   input::placeholder {
-    transition: 0.2s;
-    color: #7972de; 
-   }
-   input:focus::placeholder { 
-    font-size: 10px;
-    transform: translateY(-16px); /* Сдвигаем вверх */
-   }
-  </style>
- </head>
- <body>
-  <form>
-   <input type="text" name="login" data-placeholder="Введите логин">
-   <input type="password" name="pass" data-placeholder="Введите пароль">
-  </form>
- </body>
+
+<head>
+    <meta charset="utf-8">
+    <title>data-placeholder</title>
+    <style>
+        form {
+            width: 200px;
+            margin: auto;
+        }
+
+        input {
+            width: 80%;
+            margin: 10px 0;
+            padding: 12px 0;
+        }
+
+        input:focus {
+            outline: none;
+            /* Убираем контур */
+        }
+
+        input::placeholder {
+            transition: 0.2s;
+            color: #7972de;
+        }
+
+        input:focus::placeholder {
+            font-size: 10px;
+            transform: translateY(-16px);
+            /* Сдвигаем вверх */
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <input type="text" name="login" placeholder="Введите логин">
+        <input type="password" name="pass" placeholder="Введите пароль">
+    </form>
+</body>
+
 </html>
