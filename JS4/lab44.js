@@ -4,9 +4,9 @@
         let vova = { name: "Вова", age: 12 };
         let people = [vasya, masha, vova];
 
-        function Sorted(a, b) {
+        function sorted(a, b) {
             return a.age - b.age;
         }
-        people.sort(Sorted);
+        people.sort(sorted);
 
         for (let i in people) console.log(people[i]);

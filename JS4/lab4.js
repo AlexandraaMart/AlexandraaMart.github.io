@@ -20,14 +20,16 @@ book2.title = 'Обрыв';
 book2.pubYear = 1888;
 book2.price = 1000;
 
-function showBook() {
-    console.log(this.title);
-    console.log(this.price);
-}
-
 for (let i in book2) console.log(book2[i]);
 console.log(isEmpty(book2));
 
+function showBook() {
+     console.log(this.title);
+     console.log(this.price);
+}
+
 book1.show();
 
-book2.show(showBook);
+book2.show=showBook;
+
+book2.show();

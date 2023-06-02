@@ -71,9 +71,9 @@
     </div>
 
     <script>
-        let PANE = document.querySelectorAll('#messages-container .remove-button');
-        for (let i = 0; i < PANE.length; i++) {
-            let but = PANE[i];
+        let panes = document.querySelectorAll('#messages-container .remove-button');
+        for (let i = 0; i < panes.length; i++) {
+            let but = panes[i];
             but.onclick = function () {
                 let elem = this.parentNode;
                 elem.parentNode.removeChild(elem);

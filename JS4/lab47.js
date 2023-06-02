@@ -1,24 +1,19 @@
 'use strict'
 function formatDate(date) {
 
-    let day = date.getDate();
-    if (day < 10) day = '0' + day;
-
-    let month = date.getMonth() + 1;
-    if (month < 10) month = '0' + month;
-
-    let year = date.getFullYear()%100;
-    if (year < 10) year = '0' + year;
-
-    return day + '.' + month + '.' + year;
-}
-
-let d = new Date(2014, 0, 30); // 30 янвваря 2014
-console.log(formatDate(d))
-
-let p = new Date(2017, 8, 12); // 12  августа 2017
-console.log(formatDate(p))
-
-let now = new Date();
-let today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-console.log(`Сегодня ${formatDate(today)}`)
+    let d = date.getDate();
+    if (d < 10) d = '0' + d;
+  
+    let m = date.getMonth() + 1;
+    if (m < 10) m = '0' + m;
+  
+    let y = date.getFullYear() % 100;
+    if (y < 10) y = '0' + y;
+  
+    return d + '.' + m + '.' + y;
+  }
+  
+  let d = new Date(2014, 0, 30); // 30 Янв 2014
+  let k = new Date(2007, 11, 5); // 05 Дек 2007
+  console.log( formatDate(d) ); // '30.01.14'
+  console.log( formatDate(k) ); 
