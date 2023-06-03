@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>data-placeholder</title>
     <style>
         form {
@@ -13,32 +15,38 @@
         input {
             width: 80%;
             margin: 10px 0;
-            padding: 12px 0;
+            padding: 15px 0;
         }
 
-        input:focus {
+        :focus {
             outline: none;
             /* Убираем контур */
         }
 
-        input::placeholder {
+        ::placeholder {
             transition: 0.2s;
-            color: #7972de;
+            color: #3227d2;
         }
 
-        input:focus::placeholder {
+        :focus::placeholder {
             font-size: 10px;
-            transform: translateY(-16px);
+            transform: translateY(-15px);
             /* Сдвигаем вверх */
         }
     </style>
 </head>
 
 <body>
+    <div id="user" data-placeholder="Ваш логин"></div>
+
     <form>
-        <input type="text" name="login" placeholder="Введите логин">
-        <input type="password" name="pass" placeholder="Введите пароль">
+        <input type="text" name="login" id="login">
     </form>
+
+    <script>
+        let el = document.getElementById('user');
+        document.getElementById('login').placeholder = el.dataset.placeholder;
+    </script>
 </body>
 
 </html>
