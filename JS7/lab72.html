@@ -1,80 +1,44 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="ru">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
     <title>data-placeholder</title>
+
     <style>
-        form {
-            width: 200px;
-            margin: auto;
-        }
-
-        input {
-            width: 80%;
-            margin: 10px 0;
-            padding: 15px 0;
-        }
-
-        :focus {
-            outline: none;
-        }
-
         ::placeholder {
-            transition: 0.2s;
-            color: #3227d2;
-        }
-
-        :focus::placeholder {
-            font-size: 10px;
-            transform: translateY(-15px);
-        }
-
-        body {
-            min-height: 100vh;
-            padding: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #190606;
-            font-family: "Roboto", sans-serif;
-            font-size: 18px;
-        }
-
-        .form_item {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            font-weight: 400;
-            font-size: 16px;
-        }
-
-        label {
-            cursor: default;
+            color: rgb(123, 123, 226);
         }
     </style>
+
 </head>
 
 <body>
-    <form class="form" id="form">
-        <label class="form_item">
-            <input class="form_item" type="email" data-placeholder="alex@mail.com" tabindex="0">
-            <span class="form_label"></span>
-        </label>
-        </iform>
-
-        <!-- <div id="user" data-placeholder="Ваш логин"></div>
-
-    <form>
-        <input type="text" name="login" id="login" placeholder="haha">
-    </form>
-
+    <div id="hhh">
+        <label></label>
+        <input type="email" data-placeholder="alex@gmail.com" />
+    </div>
     <script>
-        let el = document.getElementById('user');
-        document.getElementById('login').placeholder = el.dataset.placeholder;
-    </script> -->
+        'use strict';
+        let tf = document.getElementById("hhh");
+
+        let input = tf.getElementsByTagName("input")[0];
+        let lb = tf.getElementsByTagName("label")[0];
+        lb.style.display = "none";
+
+        input.setAttribute("placeholder", input.dataset.placeholder); //setAttribute добавляет атрибут или изменяет значение существующего атрибута в выбранном элементе.
+        lb.innerHTML = input.dataset.placeholder;
+
+        input.addEventListener("blur", function () {
+            lb.style.display = "none";
+            input.setAttribute("placeholder", input.dataset.placeholder);
+        });
+
+        input.addEventListener("focus", function () { //addEventListener устанавливает функцию, которая будет вызываться всякий раз, когда указанное событие доставляется цели
+            lb.style.display = "block";
+            input.setAttribute("placeholder", "");
+        });
+    </script>
 </body>
 
 </html>
