@@ -20,7 +20,6 @@
 
         :focus {
             outline: none;
-            /* Убираем контур */
         }
 
         ::placeholder {
@@ -31,13 +30,42 @@
         :focus::placeholder {
             font-size: 10px;
             transform: translateY(-15px);
-            /* Сдвигаем вверх */
+        }
+
+        body {
+            min-height: 100vh;
+            padding: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #190606;
+            font-family: "Roboto", sans-serif;
+            font-size: 18px;
+        }
+
+        .form_item {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            font-weight: 400;
+            font-size: 16px;
+        }
+
+        label {
+            cursor: default;
         }
     </style>
 </head>
 
 <body>
-    <div id="user" data-placeholder="Ваш логин"></div>
+    <form class="form" id="form">
+        <label class="form_item">
+            <input class="form_item" type="email" data-placeholder="alex@mail.com" tabindex="0">
+            <span class="form_label"></span>
+        </label>
+        </iform>
+
+        <!-- <div id="user" data-placeholder="Ваш логин"></div>
 
     <form>
         <input type="text" name="login" id="login" placeholder="haha">
@@ -46,7 +74,7 @@
     <script>
         let el = document.getElementById('user');
         document.getElementById('login').placeholder = el.dataset.placeholder;
-    </script>
+    </script> -->
 </body>
 
 </html>
