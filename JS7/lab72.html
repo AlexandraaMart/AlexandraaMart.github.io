@@ -6,18 +6,22 @@
     <title>data-placeholder</title>
 
     <style>
-        ::placeholder {
-            color: rgb(123, 123, 226);
+       .placeholder::-webkit-input-placeholder {
+            color: rgb(19, 33, 234);
+        }
+
+        form{
+            text-align: center;
         }
     </style>
 
 </head>
 
 <body>
-    <div id="hhh">
-        <label></label>
-        <input type="email" data-placeholder="alex@gmail.com" />
-    </div>
+    <form id="hhh">
+        <label for="sss"></label>
+        <input type="email" data-placeholder="Введите почту" class='placeholder' id="sss" />
+    </form>
     <script>
         'use strict';
         let tf = document.getElementById("hhh");
