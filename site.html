@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+        <meta charset="utf-8">
+        <title>Форма</title>
+        <style>
+            table {
+                width: 400px;
+                border: 0px solid gray;
+                margin: 15px;
+                float:left
+            }
+            td, th {
+                border: 0px solid gray;
+                padding: 5px;
+            }
+            </style>
+        </head>
+        <body>
+            <h1>Данные студентов первого курса</h1>
+        
+              <form action="#">
+                    <table>
+                        <tbody>
+                        <tr>
+                            <th>Фамилия:</th>
+                            <td><input type="text" name="familia"></td>
+                        </tr>
+                        <tr>
+                            <th>Имя:</th>
+                            <td><input type="text" name="firstname"></td>
+                            <br>
+                        </tr>
+                        <tr>
+                            <th>Отчество:</th>
+                            <td><input type="text" name="second name"></td>
+                            <br>
+                        </tr>
+                        <tr>
+                            <th><label for="bday">Дата рождения:</label></th>
+                            <td><input type="date" id="bday" name="bday" /></td>
+
+                        </tr>
+                        
+                        <tr>
+                            <th>Пол</p></th>
+                            <td><label>
+                                <input type="radio" name="status"> Мужчина
+                            </label>
+                            <label>
+                                <input type="radio" name="status"> Женщина
+                            </label></td>
+                        </tr>
+                        <tr>
+                            <th>Балл ЕГЭ:</th>
+                            <td><input type="text" name="ball"></td>
+                            <br>
+                        </tr>
+                        <tr>
+                            <th>Факультет:</th>
+                            <td><select name="select" size="1">
+                                <option selected value="s1">Физико-математический</option>
+                                <option value="s1">Архитектурно строительный</option>
+                                <option value="s2">Исторический</option>
+                                <option value="s3">ФФКиС</option>
+                                <option value="s4">ИЕНИБ</option>
+                               </select></td>
+                        </tr>
+
+                        <tr>
+                            <th>Направление:</th>
+                            <td><select name="select" size="1">
+                                <option selected value="s1">МО</option>
+                                <option value="s1">ПИ</option>
+                                <option value="s2">ММ</option>
+                                <option value="s3">ПМ</option>
+                                <option value="s4">ФЗ</option>
+                               </select></td>
+                        </tr>
+                       
+                        <tr>
+                            <th>Язык изучения:</th>
+                            <td>
+                                <label><input type="checkbox" id="language1" name="st_language">Испанский</label><br>
+                                <label><input type="checkbox" id="language2" name="st_language">Немецкий</label><br>
+                                <label><input type="checkbox" id="language3" name="st_language">Английский</label><br>
+                                <label><input type="checkbox" id="language4" name="st_language">Китайский</label><br>
+                            </td>
+                        
+                    
+                            
+                        </tr>
+                        <tr>
+                            <th>
+                            <button type="submit">
+                             Готово
+                            </button></th>
+                
+                            <td><button type="reset">
+                             Очистить
+                            </button></td>
+                         </tr>
+                    </tbody>
+                </table>
+            </form>
+        
+        </body>
+</html>
