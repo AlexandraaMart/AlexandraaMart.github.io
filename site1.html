@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+        <meta charset="utf-8">
+        <title>Форма</title>
+        <style>
+            table {
+                width: 400px;
+                border: 0px solid gray;
+                margin: 15px;
+                float:left
+            }
+            td, th {
+                border: 0px solid gray;
+                padding: 5px;
+            }
+            </style>
+        </head>
+        <body>
+            <h1>Личные данные студента</h1>
+        
+              <form action="#">
+                    <table>
+                        <tbody>
+                        <tr>
+                            <th>Фамилия:</th>
+                            <td><input type="text" name="familia"></td>
+                        </tr>
+                        <tr>
+                            <th>Имя:</th>
+                            <td><input type="text" name="firstname"></td>
+                            <br>
+                        </tr>
+                        <tr>
+                            <th>Отчество:</th>
+                            <td><input type="text" name="second name"></td>
+                            <br>
+                        </tr>
+                        <tr>
+                            <th><label for="bday">Дата рождения:</label></th>
+                            <td><input type="date" id="bday" name="bday" /></td>
+
+                        </tr>
+                        
+                        <tr>
+                            <th>Пол</p></th>
+                            <td><label>
+                                <input type="radio" name="status"> Мужчина
+                            </label>
+                            <label>
+                                <input type="radio" name="status"> Женщина
+                            </label></td>
+                        </tr>
+                        <tr>
+                            <th>Электронная почта</th>
+                            <td><input type="tel" name="tel" pattern="8[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"></td>
+                        </tr>
+                        <tr>
+                            <th>Телефон</th>
+                            <td><input type="email" name="phone"></td>
+                        </tr>
+                        <tr>
+                            <th>Город:</th>
+                            <td><input type="text" name="city"></td>
+                        </tr>
+                        <tr>
+                            <th>
+                            <button type="submit">
+                             Готово
+                            </button></th>
+                
+                            <td><button type="reset">
+                             Очистить
+                            </button></td>
+                         </tr>
+                    </tbody>
+                </table>
+            </form>
+        
+        </body>
+</html>
